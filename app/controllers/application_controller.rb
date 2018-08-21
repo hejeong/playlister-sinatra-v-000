@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views/") }
 
   configure do
-    enable :session
+    enable :sessions
   end
   get '/' do
     erb :index
