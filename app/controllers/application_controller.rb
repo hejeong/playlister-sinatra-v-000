@@ -4,6 +4,9 @@ class ApplicationController < Sinatra::Base
   set :session_secret, "my_application_secret"
   set :views, Proc.new { File.join(root, "../views/") }
 
+  configure do
+    enable :session
+  end
   get '/' do
     erb :index
   end
