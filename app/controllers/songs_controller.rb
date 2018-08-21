@@ -10,7 +10,7 @@ class SongsController < ApplicationController
     erb :'song/new'
   end
 
-  post '/songs/new' do
+  post '/songs' do
     Artist.find_or_create(params["Artist Name"])
 
   end
