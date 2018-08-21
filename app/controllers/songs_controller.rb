@@ -14,7 +14,6 @@ class SongsController < ApplicationController
   post '/songs/new' do
     song = Song.create(params["Name"])
     song.artist = Artist.find_or_create_by(name: params["Artist Name"])
-    binding.pry
     redirect to "songs/#{song.slug}"
   end
 
