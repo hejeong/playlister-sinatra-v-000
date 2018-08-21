@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    Artist.find_or_create(params["Artist Name"])
+    Artist.find_or_create_by(name: params["Artist Name"])
 
   end
 
