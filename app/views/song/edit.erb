@@ -8,7 +8,8 @@
   <br>
   <label>Genre: </label>
   <% Genre.all.each do |genre| %>
-    <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
+    <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>" 
+    <%= 'checked' if @song.genre_ids.include?(genre.id) %>>
   <% end %>
   <br>
   <input id="submit" type="submit" value="Create">
