@@ -1,7 +1,7 @@
 <h1>Update a Song</h1>
 <form action="/songs" method="post">
   <label>Artist:</label>
-  <input type="text" name="Artist Name">
+  <input type="text" name="Artist Name" value="<%= @song.artist.name %>">
   <br>
   <label>Song Name: </label>
   <input  type="text" name="Name">
