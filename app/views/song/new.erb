@@ -7,6 +7,6 @@
   <input type="text" name="artist[name]">
   <label>Genre: </label>
   <% @genres.each do |genre| %>
-
+    <input type="checkbox" name="genres[]" value="<%= genre.id %>">
   <% end %>
 </form>
