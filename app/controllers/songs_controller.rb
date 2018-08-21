@@ -10,9 +10,9 @@ class SongsController < ApplicationController
     erb :'song/new'
   end
 
-  post '/songs'do
+  post '/songs' do
+    artist = Artist.find_or_create_by(name: params["Artist Name"])
     song = Song.create(params["Name"])
-    song.artist = Artist.find_or_create_by(name: params["Artist Name"])
     redirect to "songs/#{song.slug}"
   end
 
