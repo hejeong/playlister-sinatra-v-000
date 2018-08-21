@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs/new' do
-
+    Artist.create(params["Artist Name"])
   end
 
   get '/songs/:slug' do
