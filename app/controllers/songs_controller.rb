@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 
   post '/songs/new' do
     Artist.find_or_create(params["Artist Name"])
-    
+
   end
 
   get '/songs/:slug' do
