@@ -4,8 +4,5 @@
   <input type="text" name="song[name]">
   <br>
   <label>Artist:</label>
-  <% @artists.each do |artist| %>
-    <input type="checkbox" name="artists[]" value="<%= artist.id %>">
-  <% end %>
-  <input id="submit" type="submit" value="Submit">
+  <input type="text" name="artist[name]">
 </form>
