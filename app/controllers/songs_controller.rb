@@ -11,7 +11,7 @@ class SongsController < ApplicationController
     erb :'song/new'
   end
 
-  post '/songs' do
+  post '/songs/new' do
     song = Song.create(params["Name"])
     song.artist = Artist.find_or_create_by(name: params["Artist Name"])
     binding.pry
